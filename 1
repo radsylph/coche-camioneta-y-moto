@@ -1,0 +1,218 @@
+package poochoches;
+
+public class camioneta {
+	private int ruedas;
+	private int largo;
+	private int ancho;
+	private int motor;
+	private int motorp;
+	private int peso;
+	private int cilindros_del_motor;
+	
+	private String color;
+	
+	private int pesototal;
+	private boolean doble_cabina;
+	private boolean asientos_de_cuero;
+	private boolean climatizador;
+	private boolean cuatro_por_cuatro;
+	
+	public camioneta()
+	{
+		ruedas = 4;
+		largo = 4000 ; //cm
+		ancho = 180; //cm
+		cilindros_del_motor = 4;
+		motorp = 200; //caballos de fuerza
+		motor = 200; //kg
+		peso = 3200; //kg
+		pesototal = peso + motor; //kg
+		
+		doble_cabina = true;
+		asientos_de_cuero = true;
+		climatizador = true;
+		cuatro_por_cuatro = true;
+	}
+	
+	//Getters
+		//funcion: devolver el valor de la propiedades de los objetos
+		//syntaxis:public dato_a_devolver nombre_metodo(){codigo + return} 
+	public String dimelargo() {
+		return"\nEl largo de la camioneta es:" +largo/1000 +" metros";
+	}
+	public String dimepeso() {
+		return"\nEl peso de la camioneta es :" +pesototal +"kg";
+	}
+	public String dimeruedas() {
+		return"\nla camioneta tiene: " + ruedas +" ruedas";
+	}
+	public String dimeancho() {
+		return"\nla camioneta tiene: "+ancho +"cm de largo";
+	}
+	public String dimecilindro() {
+		return"\nel motor de la comioneta tiene: " + cilindros_del_motor + " cilindros";
+	}
+	public String dimepotencia() {
+		return"\nla potencial del motor es de: " + motorp + " caballos de fuerza";
+	}
+	public String asientoscuero () {
+	
+		if (asientos_de_cuero)
+		{
+			System.out.println("\nla camioneta tiene asientos de cuero");
+		}
+		else 
+		{
+			System.out.println("\nla camioneta no tiene asientos de cuero");
+		}
+		
+		return" ";
+	}
+	public String climatizador () {
+		if (climatizador)
+		{
+			System.out.println("la camioneta tiene climatizador\n");
+		}
+		else {
+			System.out.println("la camioneta no tiene climatizador\n");
+		}
+		
+		return" ";
+		
+	}
+	public String cxc () {
+		if (cuatro_por_cuatro)
+		{
+			System.out.println("la camioneta tiene modalidad 4x4");
+		}
+		else 
+		{
+			System.out.println("la camioneta no tiene modalidad 4x4");
+		}
+		
+		return"";
+	}
+	public String doble_cabina() {
+		if (doble_cabina)
+		{
+			System.out.println("la camioneta tiene doble cabina");
+		}
+		else
+		{
+			System.out.println("la camioneta no tiene doble cabina");	
+		}
+		return"";
+		}
+
+	}
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		package poochoches;
+
+public class usoCamioneta {
+	public static void main(String[] args) {
+		
+		camioneta montana = new camioneta();
+		System.out.println(montana.dimelargo() + montana.dimeancho() + montana.dimeruedas());
+		System.out.println(montana.dimepeso() + montana.dimepotencia());
+		System.out.println(montana.dimecilindro() + montana.doble_cabina());
+		System.out.println(montana.asientoscuero() + montana.climatizador());
+		System.out.println(montana.cxc());
+	}
+
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	package poochoches;
+
+public class moto {
+	private int ruedas;
+	private int motor;
+	private int motorp;
+	private int largo;
+	private int ancho;
+	private int peso;
+	private int pesototal;
+	private boolean asientos_de_cuero;
+	private boolean suspension;
+	private boolean radio;
+	
+	public moto(){
+		ruedas=2;
+		largo=243; //cm
+		ancho=35; //cm
+		motor=150;// kg
+		motorp=120;// caballos de fuerza
+		peso=500;// kg
+		pesototal=peso+motor;
+		
+		asientos_de_cuero=true;
+		suspension=true;
+		radio=false;
+		
+	}
+	public String dimelargo() {
+		return"\nEl largo de la moto es:" +largo/100+ " metros";
+	}
+	public String dimeancho() {
+		return"\nEl ancho de la moto es: " +ancho+ " centimetros";
+	}
+	public String peso() {
+		return"\nEl peso de la moto es :" +pesototal+ "kg";
+	}
+	
+	public String motorp() {
+		return"\nLa potencial del motor es " +motorp + "caballos de fuerza";
+	}
+	public String dimeruedas() {
+		return"\nLa moto tiene " +ruedas +" ruedas";
+	}
+	public String asientocuero() {
+		if (asientos_de_cuero)
+		{
+			System.out.println("la moto tiene asientos de cuero");
+		}
+		else
+		{
+			System.out.println("la moto no tiene asientos de cuero");
+		}
+		return "";
+	}
+	public String suspension() {
+		if (suspension)
+		{
+			System.out.println("la moto tiene suspension");
+		}
+		else
+		{
+			System.out.println("la moto no tiene suspension");
+		}
+		return"";
+	}
+	public String radio() {
+		if (radio)
+		{
+			System.out.println("la moto tiene radio");
+		}
+		else 
+		{
+			System.out.println("la moto no tiene radio");
+		}
+		return "";
+	
+	}
+	
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package poochoches;
+
+public class usoMoto {
+	public static void main(String[] args)
+	{
+		moto gtx = new moto();
+		System.out.println(gtx.dimelargo()+gtx.dimeancho()+gtx.dimeruedas());
+		System.out.println(gtx.radio()+gtx.asientocuero()+gtx.suspension());
+	}
+
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
